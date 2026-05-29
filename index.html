@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Rey Alvin Anapen — Senior Data Analyst, Analytics Engineer & Marketing Analytics Specialist with 12+ years of experience."/>
+<title>Rey Alvin Anapen · Analytics Engineer & Senior Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#080E1A; --bg2:#0D1625; --bg3:#111E30;
+  --card:rgba(13,22,37,0.88);
+  --border:rgba(255,255,255,0.07); --border2:rgba(6,182,212,0.28);
+  --teal:#06B6D4; --indigo:#6366F1; --amber:#F59E0B;
+  --green:#10B981; --rose:#F43F5E; --blue:#3B82F6; --purple:#A78BFA;
+  --text:#EFF6FF; --muted:#94A3B8; --dim:#4B5563;
+  --fs:'Inter',sans-serif; --fh:'Syne',sans-serif; --fm:'JetBrains Mono',monospace;
+  --sy:clamp(72px,10vw,128px); --wrap:1240px; --pad:clamp(20px,5vw,56px); --r:14px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--fs);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%} a{color:inherit;text-decoration:none} button{font-family:var(--fs);cursor:pointer} ul{list-style:none}
+::-webkit-scrollbar{width:4px} ::-webkit-scrollbar-track{background:var(--bg)} ::-webkit-scrollbar-thumb{background:var(--teal);border-radius:2px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}
+@keyframes floatR{0%,100%{transform:translateY(0)}50%{transform:translateY(11px)}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes spinBack{to{transform:rotate(-360deg)}}
+@keyframes glow{0%,100%{box-shadow:0 0 24px rgba(6,182,212,.2)}50%{box-shadow:0 0 56px rgba(6,182,212,.5)}}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.section{padding:var(--sy) 0}
+.section-alt{background:var(--bg2)}
+.gt{background:linear-gradient(135deg,var(--teal) 0%,var(--indigo) 60%,var(--amber) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.slabel{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);padding:5px 14px;border-radius:40px;margin-bottom:20px}
+.stitle{font-family:var(--fh);font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-bottom:14px}
+.ssub{color:var(--muted);font-size:16px;max-width:560px;margin-bottom:52px}
+.card{background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:var(--r);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.card:hover{transform:translateY(-4px);border-color:rgba(6,182,212,.28);box-shadow:0 20px 48px rgba(6,182,212,.07)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;letter-spacing:.02em;padding:11px 26px;border-radius:9px;border:none;cursor:pointer;transition:all .3s ease}
+.btn-p{background:linear-gradient(135deg,var(--teal),var(--indigo));color:#fff}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(6,182,212,.35)}
+.btn-s{background:transparent;color:var(--text);border:1px solid rgba(6,182,212,.3)}
+.btn-s:hover{background:rgba(6,182,212,.08);border-color:var(--teal);transform:translateY(-2px)}
+.btn-sm{padding:8px 18px;font-size:13px}
+.hdiv{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(6,182,212,.18),transparent)}
+
+/* BG */
+.bg-grid{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(6,182,212,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(6,182,212,.03) 1px,transparent 1px);background-size:60px 60px}
+.orb{position:fixed;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:-1}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;padding:0 var(--pad);transition:background .4s,box-shadow .4s}
+#nav.sc{background:rgba(8,14,26,.92);backdrop-filter:blur(24px);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nlogo{font-family:var(--fh);font-size:19px;font-weight:800;letter-spacing:-.02em;margin-right:auto}
+.nlinks{display:flex;align-items:center;gap:26px}
+.nlinks a{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.02em;transition:color .2s}
+.nlinks a:hover{color:var(--teal)}
+.nmob{display:none;background:none;border:none;color:var(--text);font-size:22px;margin-left:16px;cursor:pointer}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:64px;position:relative;overflow:hidden}
+.h-inner{display:grid;grid-template-columns:1fr 400px;gap:clamp(40px,6vw,100px);align-items:center}
+.h-eye{font-family:var(--fm);font-size:12px;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.h-eye::before{content:'';display:block;width:24px;height:2px;background:var(--teal);border-radius:2px}
+.h-name{font-family:var(--fh);font-size:clamp(40px,5.5vw,68px);font-weight:800;letter-spacing:-.04em;line-height:1.03;margin-bottom:14px}
+.h-twrap{height:36px;overflow:hidden;margin-bottom:24px}
+.h-role{font-family:var(--fm);font-size:clamp(13px,1.6vw,16px);color:var(--teal);display:flex;align-items:center;gap:8px;transition:all .35s ease}
+.h-desc{color:var(--muted);font-size:clamp(14px,1.5vw,16px);line-height:1.85;max-width:520px;margin-bottom:36px}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
+.h-stats{display:flex;gap:clamp(20px,4vw,48px);padding-top:32px;border-top:1px solid var(--border)}
+.h-sv{font-family:var(--fh);font-size:clamp(24px,3vw,32px);font-weight:800;color:var(--teal);line-height:1}
+.h-sl{font-size:12px;color:var(--muted);margin-top:4px;letter-spacing:.04em}
+
+/* Photo */
+.phcol{display:flex;justify-content:center;align-items:center;position:relative}
+.phring{position:relative;width:clamp(240px,28vw,340px);height:clamp(240px,28vw,340px)}
+.ph-o1{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(6,182,212,.2);animation:spinSlow 28s linear infinite}
+.ph-o2{position:absolute;inset:-18px;border-radius:50%;border:1px dashed rgba(99,102,241,.14);animation:spinBack 38s linear infinite}
+.phimg{width:100%;height:100%;border-radius:50%;overflow:hidden;border:2px solid rgba(6,182,212,.4);animation:glow 3.5s ease-in-out infinite;position:relative;z-index:2;box-shadow:0 0 60px rgba(6,182,212,.18)}
+.phimg img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.chip{position:absolute;z-index:3;background:rgba(8,14,26,.92);border:1px solid rgba(6,182,212,.22);backdrop-filter:blur(16px);border-radius:10px;padding:10px 14px;white-space:nowrap;font-size:12px;font-family:var(--fm);color:var(--text)}
+.chip .cv{font-weight:700;font-size:18px;color:var(--teal)}
+.c1{top:-16px;left:-40px;animation:float 5s ease-in-out infinite}
+.c2{top:20px;right:-50px;animation:floatR 6.5s .5s ease-in-out infinite}
+.c3{bottom:30px;left:-50px;animation:float 7s .3s ease-in-out infinite}
+.c4{bottom:-14px;right:-20px;animation:floatR 5.5s .8s ease-in-out infinite}
+
+/* ABOUT */
+.ab-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:clamp(40px,6vw,80px);align-items:start}
+.ab-meta{display:flex;flex-direction:column;gap:14px;margin:28px 0}
+.ab-row{display:flex;gap:12px;align-items:center;font-size:14px}
+.ab-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
+.ab-k{color:var(--dim);font-family:var(--fm);font-size:12px;min-width:90px}
+.ab-v{color:var(--text);font-weight:500}
+.clist{background:rgba(6,182,212,.04);border:1px solid rgba(6,182,212,.14);border-radius:var(--r);padding:18px 20px}
+.clist-t{font-size:11px;font-family:var(--fm);color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.ci{display:flex;align-items:start;gap:10px;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted)}
+.ci:last-child{border-bottom:none;padding-bottom:0}
+.ci-ico{color:var(--teal);flex-shrink:0;margin-top:2px}
+
+/* SKILLS */
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.sk-card{padding:24px}
+.sk-ico{width:40px;height:40px;border-radius:10px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.sk-name{font-family:var(--fh);font-size:15px;font-weight:700;margin-bottom:12px}
+.sk-tags{display:flex;flex-wrap:wrap;gap:7px}
+.sk-tag{font-family:var(--fm);font-size:11px;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid var(--border);padding:4px 10px;border-radius:5px}
+
+/* EXPERIENCE */
+.ex-lay{display:grid;grid-template-columns:260px 1fr;gap:0}
+.ex-side{border-right:1px solid var(--border)}
+.ex-tab{width:100%;text-align:left;background:transparent;border:none;border-right:3px solid transparent;padding:16px 20px;cursor:pointer;transition:all .2s;position:relative;right:-1px}
+.ex-tab.on{border-right-color:var(--teal);background:rgba(6,182,212,.06)}
+.ex-co{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--muted);transition:color .2s}
+.ex-tab.on .ex-co{color:var(--teal)}
+.ex-pd{font-family:var(--fm);font-size:11px;color:var(--dim);margin-top:3px}
+.ex-det{padding-left:36px;animation:fadeUp .4s ease both}
+.ex-hdr{display:flex;justify-content:space-between;align-items:start;margin-bottom:24px;gap:16px;flex-wrap:wrap}
+.ex-role{font-family:var(--fh);font-size:clamp(16px,2.2vw,22px);font-weight:800;margin-bottom:4px}
+.ex-company{font-size:15px;font-weight:600;margin-bottom:4px}
+.ex-loc{font-size:12px;font-family:var(--fm);color:var(--dim)}
+.ex-pbadge{font-family:var(--fm);font-size:12px;padding:6px 14px;background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:6px;color:var(--teal);white-space:nowrap;flex-shrink:0}
+.ex-albl{font-size:11px;font-family:var(--fm);color:var(--dim);letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+.ex-ai{display:flex;gap:12px;align-items:start;margin-bottom:10px}
+.ex-arr{color:var(--teal);flex-shrink:0;font-size:12px;margin-top:3px}
+.ex-at{font-size:14px;color:var(--muted);line-height:1.75}
+.ex-tools{display:flex;gap:7px;flex-wrap:wrap}
+.ex-tool{font-family:var(--fm);font-size:11px;padding:4px 10px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--dim);border-radius:5px}
+
+/* PROJECTS */
+.pj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:22px}
+.pj-card{padding:28px;position:relative;overflow:hidden}
+.pj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--indigo));opacity:0;transition:opacity .3s}
+.pj-card:hover::before{opacity:1}
+.pj-cat{font-family:var(--fm);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:inline-block;padding:3px 10px;border-radius:4px}
+.pj-title{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.3}
+.pj-prob{color:var(--muted);font-size:13.5px;line-height:1.75;margin-bottom:14px}
+.pj-impact{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.15);border-radius:8px;padding:12px 14px;margin-bottom:18px;font-size:13px;color:var(--muted);line-height:1.65}
+.pj-impact strong{color:var(--green)}
+.pj-tools{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.pj-tool{font-family:var(--fm);font-size:11px;padding:3px 9px;background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--dim);border-radius:4px}
+.pj-btns{display:flex;gap:10px;flex-wrap:wrap}
+
+/* CASE STUDIES */
+.cs-full{display:flex;flex-direction:column;gap:56px}
+.cs-article{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+.cs-banner{padding:40px clamp(24px,4vw,52px) 32px;position:relative;overflow:hidden}
+.cs-banner::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.02),transparent);pointer-events:none}
+.cs-num{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.cs-num::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.1)}
+.cs-atitle{font-family:var(--fh);font-size:clamp(20px,2.8vw,32px);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
+.cs-brief{font-size:15px;color:rgba(255,255,255,.75);line-height:1.8;max-width:720px}
+.cs-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.cs-kpi{background:rgba(0,0,0,.25);border-radius:10px;padding:16px;text-align:center;border:1px solid rgba(255,255,255,.08)}
+.cs-kv{font-family:var(--fh);font-size:clamp(18px,2.5vw,26px);font-weight:800;line-height:1}
+.cs-kl{font-size:10px;color:rgba(255,255,255,.5);margin-top:4px;font-family:var(--fm);letter-spacing:.04em}
+.cs-body{padding:clamp(24px,4vw,52px)}
+.cs-sect{margin-bottom:36px}
+.cs-sh{font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.cs-sn{font-family:var(--fm);font-size:12px;min-width:28px;opacity:.5}
+.cs-p{color:var(--muted);font-size:14.5px;line-height:1.85;margin-bottom:12px}
+.cs-blist{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.cs-bi{display:flex;gap:12px;align-items:start;font-size:14px;color:var(--muted);line-height:1.75}
+.cs-bd{flex-shrink:0;font-size:11px;margin-top:4px}
+pre.cs-code{background:rgba(6,182,212,.04);border:1px solid rgba(6,182,212,.16);border-radius:10px;padding:20px 22px;overflow-x:auto;font-family:var(--fm);font-size:12px;line-height:1.8;color:#7DD3FC;margin:14px 0}
+.cs-arch{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:16px 0}
+.cs-arch-step{background:rgba(6,182,212,.06);border:1px solid rgba(6,182,212,.16);border-radius:10px;padding:14px;text-align:center}
+.cs-arch-ico{font-size:22px;margin-bottom:8px}
+.cs-arch-n{font-family:var(--fh);font-size:13px;font-weight:700;margin-bottom:4px}
+.cs-arch-d{font-size:11px;color:var(--dim);font-family:var(--fm)}
+.cs-tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cs-tbadge{font-family:var(--fm);font-size:12px;padding:5px 12px;border-radius:6px;border:1px solid}
+.cs-footer{padding:24px clamp(24px,4vw,52px);border-top:1px solid var(--border);display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+
+/* TECH STACK */
+.ts-cat{margin-bottom:32px}
+.ts-cl{font-size:11px;font-family:var(--fm);color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.ts-cl::after{content:'';flex:1;height:1px;background:var(--border);max-width:80px}
+.ts-row{display:flex;flex-wrap:wrap;gap:10px}
+.ts-b{font-family:var(--fm);font-size:13px;font-weight:500;padding:9px 18px;border-radius:8px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--muted);transition:all .25s;cursor:default}
+.ts-b:hover{border-color:rgba(6,182,212,.35);color:var(--teal);background:rgba(6,182,212,.06);transform:translateY(-2px)}
+
+/* CERTS */
+.ct-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.ct-card{padding:22px;display:flex;align-items:start;gap:16px}
+.ct-ico{width:44px;height:44px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:20px}
+.ct-name{font-family:var(--fh);font-size:14px;font-weight:700;margin-bottom:4px;line-height:1.3}
+.ct-iss{font-size:12px;color:var(--dim);font-family:var(--fm)}
+.ct-yr{font-size:11px;color:var(--teal);margin-top:5px;font-family:var(--fm)}
+
+/* CONTACT */
+.co-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(40px,6vw,80px);align-items:start}
+.co-cta{font-family:var(--fh);font-size:clamp(28px,4vw,42px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+.co-links{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.co-lk{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--r);transition:all .25s}
+.co-lk:hover{background:rgba(6,182,212,.06);border-color:rgba(6,182,212,.3)!important;transform:translateX(4px)}
+.co-li{font-size:20px;flex-shrink:0}
+.co-ll{font-size:10px;font-family:var(--fm);color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.co-lv{font-size:14px;color:var(--teal);font-family:var(--fm)}
+.co-form{padding:36px;border-radius:var(--r)}
+.fl{font-size:12px;font-family:var(--fm);color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-bottom:7px;display:block}
+.fi{width:100%;padding:12px 16px;font-family:var(--fs);font-size:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:9px;color:var(--text);outline:none;transition:border-color .2s;margin-bottom:16px}
+.fi:focus{border-color:var(--teal)}
+textarea.fi{resize:vertical;min-height:120px}
+
+footer{padding:32px var(--pad);border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:13px;color:var(--dim)}
+.flogo{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--text)}
+.flinks{display:flex;gap:20px}
+.flinks a{color:var(--dim);font-family:var(--fm);font-size:12px;transition:color .2s}
+.flinks a:hover{color:var(--teal)}
+
+@media(max-width:960px){
+  .h-inner,.ab-grid,.co-grid{grid-template-columns:1fr!important}
+  .phcol{order:-1}
+  .phring{width:200px;height:200px}
+  .c1,.c2,.c3,.c4{display:none}
+  .ex-lay{grid-template-columns:1fr!important}
+  .ex-side{border-right:none;border-bottom:1px solid var(--border);padding-bottom:4px;margin-bottom:28px;display:flex;flex-wrap:wrap;gap:4px}
+  .ex-tab{border-right:none;border-bottom:3px solid transparent;display:inline-flex;flex-direction:column}
+  .ex-tab.on{border-bottom-color:var(--teal);border-right-color:transparent}
+  .ex-det{padding-left:0}
+  .nlinks{display:none}
+  .nmob{display:block}
+  .cs-kpis{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .sk-grid,.pj-grid,.ct-grid{grid-template-columns:1fr}
+  .h-stats{gap:20px}
+  .cs-kpis{grid-template-columns:repeat(2,1fr)}
+  .cs-arch{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="orb" style="top:-10%;left:-5%;width:500px;height:500px;background:radial-gradient(rgba(6,182,212,.07),transparent 70%)" aria-hidden="true"></div>
+<div class="orb" style="bottom:-10%;right:-5%;width:600px;height:600px;background:radial-gradient(rgba(99,102,241,.06),transparent 70%)" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nlogo"><span class="gt">REY</span> <span style="color:var(--dim);font-family:var(--fs);font-weight:400;font-size:15px">ANAPEN</span></div>
+  <div class="nlinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Portfolio</a>
+    <a href="#casestudies">Case Studies</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact"><button class="btn btn-p btn-sm">Hire Me</button></a>
+  </div>
+  <button class="nmob" onclick="document.getElementById('mnav').style.display=document.getElementById('mnav').style.display==='flex'?'none':'flex'" aria-label="Menu">☰</button>
+</nav>
+<div id="mnav" style="display:none;position:fixed;top:64px;left:0;right:0;z-index:99;background:rgba(8,14,26,.97);backdrop-filter:blur(20px);padding:24px var(--pad);border-bottom:1px solid var(--border);flex-direction:column;gap:18px;font-size:15px">
+  <a href="#about" onclick="this.parentElement.style.display='none'">About</a>
+  <a href="#skills" onclick="this.parentElement.style.display='none'">Skills</a>
+  <a href="#experience" onclick="this.parentElement.style.display='none'">Experience</a>
+  <a href="#projects" onclick="this.parentElement.style.display='none'">Portfolio</a>
+  <a href="#casestudies" onclick="this.parentElement.style.display='none'">Case Studies</a>
+  <a href="#certifications" onclick="this.parentElement.style.display='none'">Certifications</a>
+  <a href="#contact" onclick="this.parentElement.style.display='none'">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <div class="h-inner">
+      <div style="animation:fadeUp .8s ease both">
+        <div class="h-eye">Philippines &nbsp;·&nbsp; Open to Remote Work Worldwide</div>
+        <div class="h-name">
+          <span>REY ALVIN</span><br/>
+          <span class="gt">ANAPEN</span>
+        </div>
+        <div class="h-twrap">
+          <div class="h-role" id="hRole"><span style="color:var(--amber)">▸</span><span id="rTxt">Analytics Engineer</span></div>
+        </div>
+        <p class="h-desc">Transforming raw, fragmented data into warehouse-first analytics systems that drive real decisions. 12+ years of experience across e-commerce, marketing, mining, and retail — building scalable pipelines, executive dashboards, and automated reporting workflows.</p>
+        <div class="h-btns">
+          <a href="#projects"><button class="btn btn-p">View Portfolio ↗</button></a>
+          <a href="#contact"><button class="btn btn-s">Contact Me</button></a>
+          <!-- ✏️ Replace # with your resume download link -->
+          <a href="#" download><button class="btn btn-s" style="border-color:rgba(148,163,184,.2)">Download CV</button></a>
+        </div>
+        <div class="h-stats">
+          <div><div class="h-sv">12+</div><div class="h-sl">Years Experience</div></div>
+          <div><div class="h-sv" style="color:var(--indigo)">50+</div><div class="h-sl">Dashboards Built</div></div>
+          <div><div class="h-sv" style="color:var(--amber)">7+</div><div class="h-sl">Industries</div></div>
+          <div><div class="h-sv" style="color:var(--green)">∞</div><div class="h-sl">Insights Delivered</div></div>
+        </div>
+      </div>
+      <div class="phcol" style="animation:fadeUp .8s .15s ease both">
+        <div class="phring">
+          <div class="ph-o1"></div><div class="ph-o2"></div>
+          <div class="phimg">
+            <!-- ✏️ Your photo is embedded below -->
+            <img src="data:image/jpeg;base64,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" alt="Rey Alvin Anapen"/>
+          </div>
+          <div class="chip c1"><div class="cv">12+</div><div>Yrs Experience</div></div>
+          <div class="chip c2"><div class="cv">dbt</div><div>Cloud Expert</div></div>
+          <div class="chip c3"><div class="cv">BQ</div><div>BigQuery</div></div>
+          <div class="chip c4"><div class="cv">50+</div><div>Dashboards</div></div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:72px;padding-top:36px;border-top:1px solid var(--border);display:flex;gap:clamp(20px,4vw,52px);flex-wrap:wrap;align-items:center">
+      <span style="font-size:11px;color:var(--dim);font-family:var(--fm);letter-spacing:.08em">CORE STACK</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">BigQuery</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">dbt Cloud</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Snowflake</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Tableau</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Power BI</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Looker Studio</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Python</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">GA4</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Shopify</span>
+      <span style="font-family:var(--fm);font-size:12px;color:var(--dim)">Amazon</span>
+    </div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- ABOUT -->
+<section id="about" class="section section-alt">
+  <div class="wrap">
+    <div class="ab-grid">
+      <div>
+        <span class="slabel">⬡ About Me</span>
+        <h2 class="stitle">Data That<br/><span class="gt">Drives Decisions</span></h2>
+        <div class="ab-meta">
+          <div class="ab-row"><div class="ab-dot"></div><span class="ab-k">Location</span><span class="ab-v">Philippines · Remote</span></div>
+          <div class="ab-row"><div class="ab-dot"></div><span class="ab-k">Experience</span><span class="ab-v">12+ Years</span></div>
+          <div class="ab-row"><div class="ab-dot"></div><span class="ab-k">Availability</span><span class="ab-v" style="color:var(--green)">● Open to Opportunities</span></div>
+          <div class="ab-row"><div class="ab-dot"></div><span class="ab-k">Focus</span><span class="ab-v">Analytics Eng · BI · E-commerce</span></div>
+        </div>
+        <div class="clist">
+          <div class="clist-t">Certifications</div>
+          <div class="ci"><span class="ci-ico">●</span>Google BI Professional Certificate (Apr 2024)</div>
+          <div class="ci"><span class="ci-ico">●</span>Google Analytics Individual Qualification</div>
+          <div class="ci"><span class="ci-ico">●</span>Fundamentals of Digital Marketing</div>
+          <div class="ci"><span class="ci-ico">●</span>Advanced Databases & SQL Querying</div>
+          <div class="ci"><span class="ci-ico">●</span>CCNA — Network Fundamentals</div>
+        </div>
+      </div>
+      <div>
+        <p style="color:var(--muted);font-size:16px;line-height:1.9;margin-bottom:20px">I'm a Senior Data Analyst and Analytics Engineer with over <strong style="color:var(--text)">12 years of enterprise experience</strong> — the kind that comes from actually solving business problems with data, not just talking about it. My work spans analytics engineering, marketing intelligence, and operational BI across e-commerce, fintech, mining, and retail.</p>
+        <p style="color:var(--muted);font-size:16px;line-height:1.9;margin-bottom:20px">I specialize in building <strong style="color:var(--teal)">warehouse-first analytics systems</strong> using BigQuery, Snowflake, and AWS Redshift — architecting dbt transformation layers, dimensional models, and BI-ready views that serve as the single source of truth for entire organizations.</p>
+        <p style="color:var(--muted);font-size:16px;line-height:1.9;margin-bottom:32px">Whether it's a multi-channel marketing attribution model reconciling Shopify, Google Ads, and Meta — or an equipment failure prediction system built on 8+ years of CMMS data — my focus is always: <strong style="color:var(--text)">clean architecture, scalable models, and insights that move the business forward.</strong></p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <span class="ts-b" style="color:var(--teal);border-color:rgba(6,182,212,.3)">BigQuery</span>
+          <span class="ts-b" style="color:var(--indigo);border-color:rgba(99,102,241,.3)">dbt Cloud</span>
+          <span class="ts-b" style="color:var(--amber);border-color:rgba(245,158,11,.3)">Tableau</span>
+          <span class="ts-b" style="color:var(--green);border-color:rgba(16,185,129,.3)">Python</span>
+          <span class="ts-b" style="color:var(--rose);border-color:rgba(244,63,94,.3)">Snowflake</span>
+          <span class="ts-b" style="color:var(--blue);border-color:rgba(59,130,246,.3)">GA4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="slabel">⬡ Core Competencies</span>
+      <h2 class="stitle">Built for <span class="gt">Every Layer</span></h2>
+      <p class="ssub" style="margin:14px auto 0">A full-stack analytics skill set developed across 7+ industries — from raw warehouse ingestion to executive dashboards.</p>
+    </div>
+    <div class="sk-grid" id="skGrid"></div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section section-alt">
+  <div class="wrap">
+    <span class="slabel">⬡ Career</span>
+    <h2 class="stitle">12 Years of <span class="gt">Real Impact</span></h2>
+    <p class="ssub">From mining operations to global e-commerce brands — a career built on solving hard data problems.</p>
+    <div class="ex-lay">
+      <div class="ex-side" id="exSide"></div>
+      <div id="exDet" class="ex-det"></div>
+    </div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:56px">
+      <span class="slabel">⬡ Portfolio</span>
+      <h2 class="stitle">Featured <span class="gt">Projects</span></h2>
+      <p class="ssub" style="margin:14px auto 0">Real-world analytics engineering, BI, and automation work — each solving a specific business problem with measurable results.</p>
+    </div>
+    <div class="pj-grid" id="pjGrid"></div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- CASE STUDIES — FULL LONG-FORM -->
+<section id="casestudies" class="section section-alt">
+  <div class="wrap">
+    <span class="slabel">⬡ Case Studies</span>
+    <h2 class="stitle">Deep Dives into <span class="gt">Real Analytics Work</span></h2>
+    <p class="ssub">Long-form walkthroughs of how I approach complex, enterprise-level analytics problems — from architecture to business impact.</p>
+
+    <div class="cs-full">
+
+<!-- ═══════════════════════════════════════════════════
+     CASE STUDY 1 — MARKETING ATTRIBUTION
+     ═══════════════════════════════════════════════════ -->
+<article class="cs-article">
+  <div class="cs-banner" style="background:linear-gradient(135deg,rgba(6,182,212,.14),rgba(99,102,241,.08))">
+    <div class="cs-num" style="color:var(--teal)">Case Study 01 · Marketing Analytics Engineering</div>
+    <h2 class="cs-atitle">Building a Warehouse-First Marketing Attribution System Using BigQuery &amp; dbt</h2>
+    <p class="cs-brief">A fast-growing e-commerce brand had a critical reporting problem: Shopify showed one revenue figure, Google Ads reported a different ROAS, and Meta Ads and TripleWhale disagreed with both. Monday morning meetings started with 30 minutes of arguments about which number was "correct" — instead of making decisions.</p>
+    <div class="cs-kpis">
+      <div class="cs-kpi" style="border-color:rgba(6,182,212,.2)"><div class="cs-kv" style="color:var(--teal)">80%</div><div class="cs-kl">Less Reporting Time</div></div>
+      <div class="cs-kpi" style="border-color:rgba(6,182,212,.2)"><div class="cs-kv" style="color:var(--teal)">5+</div><div class="cs-kl">Data Sources Unified</div></div>
+      <div class="cs-kpi" style="border-color:rgba(6,182,212,.2)"><div class="cs-kv" style="color:var(--teal)">1</div><div class="cs-kl">Source of Truth</div></div>
+      <div class="cs-kpi" style="border-color:rgba(6,182,212,.2)"><div class="cs-kv" style="color:var(--teal)">Daily</div><div class="cs-kl">Refresh Cadence</div></div>
+    </div>
+  </div>
+  <div class="cs-body">
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">01</span>The Business Problem</h3>
+      <p class="cs-p">The company was running paid campaigns across Google Ads, Meta Ads, and programmatic channels — while their storefront ran on Shopify. Attribution was being read directly from each platform's native dashboard. The problem? Each platform claimed credit for the same conversions using its own attribution window.</p>
+      <p class="cs-p">Finance needed to reconcile ad spend against actual Shopify revenue. Marketing needed a consistent ROAS number across all channels. Leadership wanted a single view of CAC, LTV, and blended CPA. None of these existed. Every reporting cycle meant four people pulling four different exports and arguing about which one to use in the board deck.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">02</span>Data Challenges</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--teal)">▸</span>Each ad platform used a different attribution window (Google: 30-day, Meta: 7-day click / 1-day view), making channel ROAS non-comparable without normalization</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--teal)">▸</span>Shopify order data and ad platform data had no shared key — joining required a mapping layer built on UTM parameters and GA4 session data</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--teal)">▸</span>TripleWhale and GA4 both applied their own algorithmic attribution models, creating a third and fourth "truth" that needed to be reconciled</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--teal)">▸</span>Currency conversion for international campaigns wasn't standardized, causing revenue inflation in platform-reported ROAS</div>
+      </div>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">03</span>Analytics Architecture</h3>
+      <div class="cs-arch">
+        <div class="cs-arch-step"><div class="cs-arch-ico">📥</div><div class="cs-arch-n">Ingestion</div><div class="cs-arch-d">Windsor.ai → BigQuery raw tables</div></div>
+        <div class="cs-arch-step"><div class="cs-arch-ico">🔧</div><div class="cs-arch-n">Staging</div><div class="cs-arch-d">dbt stg_ models · clean + type cast</div></div>
+        <div class="cs-arch-step"><div class="cs-arch-ico">⚙️</div><div class="cs-arch-n">Intermediate</div><div class="cs-arch-d">Business logic · attribution joins</div></div>
+        <div class="cs-arch-step"><div class="cs-arch-ico">📊</div><div class="cs-arch-n">Mart Layer</div><div class="cs-arch-d">BI-ready aggregations · daily KPIs</div></div>
+        <div class="cs-arch-step"><div class="cs-arch-ico">🖥️</div><div class="cs-arch-n">Dashboard</div><div class="cs-arch-d">Looker Studio · exec reporting</div></div>
+      </div>
+      <p class="cs-p">Raw data from Shopify, Google Ads, Meta Ads, GA4, and TripleWhale was piped into BigQuery using Windsor.ai connectors with daily scheduled refreshes. I built a three-layer dbt project: staging models that cleaned and typed raw data, intermediate models that applied business logic (UTM mapping, currency normalization, attribution window alignment), and mart models that produced BI-ready daily aggregations.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">04</span>SQL — Core Attribution Model</h3>
+<pre class="cs-code">-- mart_channel_performance.sql
+-- Daily channel-level KPIs with normalized attribution
+
+WITH daily_spend AS (
+    SELECT
+        date_day,
+        channel,
+        campaign_name,
+        campaign_id,
+        SUM(spend_usd)        AS total_spend,
+        SUM(clicks)           AS total_clicks,
+        SUM(impressions)      AS total_impressions,
+        SUM(attributed_conv)  AS platform_conversions
+    FROM {{ ref('int_ad_spend_normalized') }}
+    GROUP BY 1, 2, 3, 4
+),
+
+shopify_revenue AS (
+    SELECT
+        order_date            AS date_day,
+        first_touch_channel   AS channel,
+        last_touch_campaign   AS campaign_id,
+        SUM(order_revenue)    AS attributed_revenue,
+        COUNT(DISTINCT CASE WHEN is_new_customer THEN customer_id END)
+                              AS new_customers
+    FROM {{ ref('int_orders_attributed') }}
+    GROUP BY 1, 2, 3
+)
+
+SELECT
+    s.date_day,
+    s.channel,
+    s.campaign_name,
+    s.total_spend,
+    s.total_clicks,
+    s.platform_conversions,
+    r.attributed_revenue,
+    r.new_customers,
+    SAFE_DIVIDE(r.attributed_revenue, s.total_spend)           AS roas,
+    SAFE_DIVIDE(s.total_spend, NULLIF(r.new_customers, 0))     AS cac,
+    SAFE_DIVIDE(s.total_spend, NULLIF(s.platform_conversions, 0)) AS cpa,
+    SAFE_DIVIDE(s.total_clicks, NULLIF(s.total_impressions, 0))   AS ctr
+FROM daily_spend s
+LEFT JOIN shopify_revenue r
+    USING (date_day, channel, campaign_id)</pre>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">05</span>Dashboard &amp; Reporting Layer</h3>
+      <p class="cs-p">The mart layer fed a Looker Studio executive dashboard with four core views: (1) a daily channel performance heatmap showing ROAS by channel, (2) a weekly CAC trend line by acquisition channel, (3) a blended CPA by campaign cluster, and (4) a budget efficiency quadrant plotting spend vs. attributed revenue. All metrics were calculated from the same BigQuery source — eliminating the cross-platform discrepancy entirely.</p>
+      <p class="cs-p">Daily automated refresh meant leadership had current-day marketing performance by 6 AM every morning without anyone pulling a single export.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">06</span>Business Impact</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Eliminated 4+ hours of weekly manual reporting consolidation across marketing and finance teams</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Identified two underperforming Meta campaigns with below-threshold ROAS — budget was reallocated to Google, improving blended ROAS</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Finance gained the first reconcilable view of marketing spend vs. actual Shopify revenue — enabling accurate margin reporting</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Leadership moved from weekly lagging reporting to daily leading indicators — enabling same-week budget decisions</div>
+      </div>
+    </div>
+    <div class="cs-sect" style="margin-bottom:0">
+      <h3 class="cs-sh"><span class="cs-sn">07</span>Technologies Used</h3>
+      <div class="cs-tech">
+        <span class="cs-tbadge" style="color:var(--teal);border-color:rgba(6,182,212,.3);background:rgba(6,182,212,.07)">Google BigQuery</span>
+        <span class="cs-tbadge" style="color:var(--indigo);border-color:rgba(99,102,241,.3);background:rgba(99,102,241,.07)">dbt Cloud</span>
+        <span class="cs-tbadge" style="color:var(--blue);border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.07)">Looker Studio</span>
+        <span class="cs-tbadge" style="color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)">Windsor.ai</span>
+        <span class="cs-tbadge" style="color:var(--green);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.07)">Shopify</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Google Ads</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Meta Ads</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">GA4</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Python</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">AppsScript</span>
+      </div>
+    </div>
+  </div>
+  <div class="cs-footer">
+    <span style="color:var(--dim);font-size:13px;font-family:var(--fm)">Relevant Dashboard →</span>
+    <!-- ✏️ EDIT: Looker Studio link below is your real dashboard -->
+    <a href="https://datastudio.google.com/reporting/54c81c99-d197-4f10-8052-7403a047e3ed/page/xKTtF" target="_blank"><button class="btn btn-p btn-sm">View Live Dashboard ↗</button></a>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════
+     CASE STUDY 2 — PREDICTIVE MAINTENANCE
+     ═══════════════════════════════════════════════════ -->
+<article class="cs-article">
+  <div class="cs-banner" style="background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(16,185,129,.07))">
+    <div class="cs-num" style="color:var(--amber)">Case Study 02 · Operational Analytics &amp; Predictive Modeling</div>
+    <h2 class="cs-atitle">Predictive Maintenance Analytics for Mining Operations — Reducing Unplanned Downtime with 8 Years of CMMS Data</h2>
+    <p class="cs-brief">At Philex Mining's Mill Central Planning Department, recurring unplanned equipment downtime was causing production losses and escalating maintenance costs. The operations team had 8+ years of CMMS maintenance records but no systematic way to anticipate failures — parts procurement was reactive, and downtime notifications came only after equipment had already stopped.</p>
+    <div class="cs-kpis">
+      <div class="cs-kpi" style="border-color:rgba(245,158,11,.2)"><div class="cs-kv" style="color:var(--amber)">8+ Yrs</div><div class="cs-kl">Historical Data</div></div>
+      <div class="cs-kpi" style="border-color:rgba(245,158,11,.2)"><div class="cs-kv" style="color:var(--amber)">12+</div><div class="cs-kl">Equipment Types</div></div>
+      <div class="cs-kpi" style="border-color:rgba(245,158,11,.2)"><div class="cs-kv" style="color:var(--amber)">Weekly</div><div class="cs-kl">Executive KPI Reviews</div></div>
+      <div class="cs-kpi" style="border-color:rgba(245,158,11,.2)"><div class="cs-kv" style="color:var(--amber)">↓</div><div class="cs-kl">Unplanned Downtime</div></div>
+    </div>
+  </div>
+  <div class="cs-body">
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--amber)"><span class="cs-sn">01</span>The Business Problem</h3>
+      <p class="cs-p">The Mill Central Planning team managed a fleet of heavy-duty machinery critical to continuous mining operations. Equipment failures didn't just mean repair costs — every hour of unplanned downtime translated directly into production losses and overtime maintenance labor. The existing approach was entirely corrective: machines ran until they broke, parts were ordered after the failure was identified, and the root cause was documented only after the fact.</p>
+      <p class="cs-p">Management wanted predictive visibility: which machines were at risk of failure in the next 30-60 days? Which parts should procurement order proactively? Which maintenance windows could be scheduled without impacting production targets?</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--amber)"><span class="cs-sn">02</span>Data Sources &amp; Preparation</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">MEX-CMMS:</strong> 8+ years of work orders, maintenance history, failure codes, and repair durations per equipment ID</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">Inventory System:</strong> Parts usage history, stock levels, lead times, and procurement costs</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">Production Logs:</strong> Daily operating hours, load percentages, and shift scheduling data</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span>Data was extracted via SQL from MS SQL Server, cleaned in Python, and stored in a structured analytical dataset in MS Access before being served to Power BI and Tableau</div>
+      </div>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--amber)"><span class="cs-sn">03</span>Forecasting Model — Python</h3>
+<pre class="cs-code"># Failure interval forecasting — Exponential Smoothing
+# Applied per equipment_id for 12-month failure schedule
+
+import pandas as pd
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+
+def forecast_failure_schedule(equipment_id, df, horizon=12):
+    eq = df[df['equipment_id'] == equipment_id].sort_values('failure_date')
+    eq['interval_days'] = eq['failure_date'].diff().dt.days
+    intervals = eq['interval_days'].dropna()
+
+    if len(intervals) < 4:
+        return {'status': 'INSUFFICIENT_DATA', 'equipment_id': equipment_id}
+
+    model = ExponentialSmoothing(
+        intervals,
+        trend='add',
+        seasonal='add' if len(intervals) >= 24 else None,
+        seasonal_periods=12
+    ).fit(optimized=True)
+
+    forecast = model.forecast(horizon)
+    baseline_avg = intervals.mean()
+    next_interval = forecast.iloc[0]
+
+    return {
+        'equipment_id':       equipment_id,
+        'avg_interval_days':  round(baseline_avg, 1),
+        'next_predicted_days': round(next_interval, 1),
+        'risk_flag':          'HIGH'   if next_interval < baseline_avg * 0.7
+                              else 'MEDIUM' if next_interval < baseline_avg * 0.9
+                              else 'NORMAL',
+        'forecast_schedule':  forecast.round(1).tolist()
+    }</pre>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--amber)"><span class="cs-sn">04</span>KPI Dashboard &amp; Reporting</h3>
+      <p class="cs-p">I built four core reporting views in Tableau and Power BI, presented weekly to department managers and supervisors:</p>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">MTBF Trend Dashboard:</strong> Mean Time Between Failures tracked per equipment type, per shift, and per month — color-coded against maintenance compliance targets</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">Machine Availability Report:</strong> Daily availability rate by machine, compared against the operational target threshold — with variance flags for any machine below acceptable availability</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">Predictive Risk Matrix:</strong> A monthly risk matrix showing all tracked equipment plotted by failure probability (HIGH / MEDIUM / NORMAL) and days remaining until predicted next failure</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><strong style="color:var(--text)">Parts Consumption Forecast:</strong> Predicted parts demand for the next 60 days based on upcoming scheduled replacements, linked to current inventory stock levels and procurement lead times</div>
+      </div>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--amber)"><span class="cs-sn">05</span>Business Impact</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Enabled proactive maintenance scheduling — operations team began planning maintenance windows 3-4 weeks ahead instead of reacting to failures</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Procurement team used parts consumption forecasts to pre-order critical components, reducing emergency procurement costs and parts shortage delays</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Weekly MTBF and compliance dashboards became the standard executive reporting format — replacing ad-hoc spreadsheet updates with consistent, automated reporting</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Management gained data-backed evidence to justify maintenance staffing and parts budget requests — improving capital planning visibility</div>
+      </div>
+    </div>
+    <div class="cs-sect" style="margin-bottom:0">
+      <h3 class="cs-sh" style="color:var(--amber)"><span class="cs-sn">06</span>Technologies Used</h3>
+      <div class="cs-tech">
+        <span class="cs-tbadge" style="color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)">Python</span>
+        <span class="cs-tbadge" style="color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)">Statsmodels</span>
+        <span class="cs-tbadge" style="color:var(--amber);border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.07)">Scikit-learn</span>
+        <span class="cs-tbadge" style="color:var(--blue);border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.07)">Tableau</span>
+        <span class="cs-tbadge" style="color:var(--indigo);border-color:rgba(99,102,241,.3);background:rgba(99,102,241,.07)">Power BI</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">MS SQL Server</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Azure Data Studio</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">MEX-CMMS</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">MS Access</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Pandas</span>
+      </div>
+    </div>
+  </div>
+  <div class="cs-footer" style="background:rgba(245,158,11,.03)">
+    <span style="color:var(--dim);font-size:13px;font-family:var(--fm)">Philex Mining Corporation · 2014–2022</span>
+    <span style="color:var(--dim);font-size:12px;font-family:var(--fm)">Industry: Mining Operations</span>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════
+     CASE STUDY 3 — SHOPIFY PRODUCT LIFECYCLE
+     ═══════════════════════════════════════════════════ -->
+<article class="cs-article">
+  <div class="cs-banner" style="background:linear-gradient(135deg,rgba(16,185,129,.12),rgba(6,182,212,.07))">
+    <div class="cs-num" style="color:var(--green)">Case Study 03 · E-commerce Analytics Engineering</div>
+    <h2 class="cs-atitle">Shopify Product Lifecycle &amp; Sales Velocity Analytics — Eliminating Slow-SKU Blind Spots</h2>
+    <p class="cs-brief">An e-commerce business importing products from multiple suppliers had zero visibility into post-import product performance. Buyers couldn't identify slow-moving SKUs until inventory had already aged for months. There was no days-to-first-sale tracking, no velocity classification, and no automated way to distinguish fast-moving products from dead stock.</p>
+    <div class="cs-kpis">
+      <div class="cs-kpi" style="border-color:rgba(16,185,129,.2)"><div class="cs-kv" style="color:var(--green)">3</div><div class="cs-kl">SKU Velocity Tiers</div></div>
+      <div class="cs-kpi" style="border-color:rgba(16,185,129,.2)"><div class="cs-kv" style="color:var(--green)">100%</div><div class="cs-kl">Product Visibility</div></div>
+      <div class="cs-kpi" style="border-color:rgba(16,185,129,.2)"><div class="cs-kv" style="color:var(--green)">0</div><div class="cs-kl">Manual Reporting</div></div>
+      <div class="cs-kpi" style="border-color:rgba(16,185,129,.2)"><div class="cs-kv" style="color:var(--green)">Daily</div><div class="cs-kl">Auto Refresh</div></div>
+    </div>
+  </div>
+  <div class="cs-body">
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--green)"><span class="cs-sn">01</span>The Business Problem</h3>
+      <p class="cs-p">The buying team was importing hundreds of SKUs monthly from multiple suppliers across different product categories. Once a product was imported and listed on Shopify, it entered a black box — there was no systematic way to know if it had sold, how quickly it moved after listing, or how it compared to other products from the same supplier.</p>
+      <p class="cs-p">Slow-moving inventory was only discovered during quarterly stock reviews, by which point the products had been occupying warehouse space and tying up working capital for months. Leadership needed a daily, automated view of every imported product's post-import sales performance.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--green)"><span class="cs-sn">02</span>SQL — Product Lifecycle Model with Date Scaffolding</h3>
+<pre class="cs-code">-- mart_product_lifecycle.sql
+-- Classifies every imported product by sales velocity
+-- and calculates days-to-first-sale from import date
+
+WITH product_base AS (
+    SELECT
+        p.product_id,
+        p.product_title,
+        p.supplier_name,
+        p.import_date,
+        p.product_category,
+        p.unit_cost
+    FROM {{ ref('stg_shopify_products') }} p
+    WHERE p.import_date IS NOT NULL
+),
+
+order_summary AS (
+    SELECT
+        oi.product_id,
+        MIN(o.order_date)                   AS first_sale_date,
+        COUNT(DISTINCT o.order_date)        AS selling_days,
+        COUNT(DISTINCT o.order_id)          AS total_orders,
+        SUM(oi.quantity)                    AS total_units_sold,
+        SUM(oi.line_revenue)                AS total_revenue
+    FROM {{ ref('stg_shopify_order_items') }} oi
+    JOIN {{ ref('stg_shopify_orders') }} o USING (order_id)
+    GROUP BY 1
+)
+
+SELECT
+    p.*,
+    os.first_sale_date,
+    os.selling_days,
+    os.total_orders,
+    os.total_units_sold,
+    os.total_revenue,
+    DATE_DIFF(os.first_sale_date, p.import_date, DAY) AS days_to_first_sale,
+    DATE_DIFF(CURRENT_DATE(), p.import_date, DAY)     AS days_since_import,
+
+    -- Seller tier classification
+    CASE
+        WHEN os.total_units_sold IS NULL OR os.total_units_sold = 0 THEN 'Zero Seller'
+        WHEN os.selling_days = 1                                    THEN 'One-Time Seller'
+        ELSE                                                             'Multi Seller'
+    END AS seller_tier,
+
+    -- Velocity flag
+    CASE
+        WHEN os.first_sale_date IS NULL                           THEN 'Never Sold'
+        WHEN DATE_DIFF(os.first_sale_date, p.import_date, DAY) &lt;= 7  THEN 'Fast Mover'
+        WHEN DATE_DIFF(os.first_sale_date, p.import_date, DAY) &lt;= 30 THEN 'Normal'
+        ELSE                                                           'Slow Starter'
+    END AS velocity_flag,
+
+    -- Dead stock flag
+    CASE
+        WHEN os.total_units_sold IS NULL
+         AND DATE_DIFF(CURRENT_DATE(), p.import_date, DAY) > 60  THEN TRUE
+        ELSE FALSE
+    END AS is_dead_stock
+
+FROM product_base p
+LEFT JOIN order_summary os USING (product_id)</pre>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--green)"><span class="cs-sn">03</span>Dashboard Outputs</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">▸</span><strong style="color:var(--text)">Product Velocity Heatmap:</strong> A Looker Studio table showing all imported products ranked by days-to-first-sale, with color-coded velocity flags (Fast Mover / Normal / Slow Starter / Never Sold)</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">▸</span><strong style="color:var(--text)">Supplier Performance Scorecard:</strong> Average days-to-first-sale aggregated by supplier — enabling buying team to identify which suppliers consistently produced fast-moving inventory</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">▸</span><strong style="color:var(--text)">Dead Stock Alert List:</strong> Automated daily list of all products flagged as potential dead stock (60+ days post-import with zero sales) — fed to the buying team for markdown or clearance action</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">▸</span><strong style="color:var(--text)">Import Cohort Analysis:</strong> Monthly import cohorts showing velocity curves — what % of each month's imports sold within 7 / 30 / 60 days of listing</div>
+      </div>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--green)"><span class="cs-sn">04</span>Business Impact</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Buying team gained daily visibility into every imported SKU's post-import performance — replacing quarterly manual stocktakes</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Dead stock flagging enabled proactive clearance decisions weeks earlier, reducing the volume of aged inventory</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Supplier scoring by average days-to-first-sale gave the buying team data to renegotiate terms with consistently slow suppliers</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Promotional spend was prioritized on One-Time Sellers identified by the model — converting marginal performers into repeat sellers</div>
+      </div>
+    </div>
+    <div class="cs-sect" style="margin-bottom:0">
+      <h3 class="cs-sh" style="color:var(--green)"><span class="cs-sn">05</span>Technologies Used</h3>
+      <div class="cs-tech">
+        <span class="cs-tbadge" style="color:var(--teal);border-color:rgba(6,182,212,.3);background:rgba(6,182,212,.07)">Google BigQuery</span>
+        <span class="cs-tbadge" style="color:var(--indigo);border-color:rgba(99,102,241,.3);background:rgba(99,102,241,.07)">dbt Cloud</span>
+        <span class="cs-tbadge" style="color:var(--blue);border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.07)">Looker Studio</span>
+        <span class="cs-tbadge" style="color:var(--green);border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.07)">Shopify</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Python</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Windsor.ai</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">AppsScript</span>
+      </div>
+    </div>
+  </div>
+  <div class="cs-footer">
+    <span style="color:var(--dim);font-size:13px;font-family:var(--fm)">Relevant Live Dashboard →</span>
+    <!-- ✏️ EDIT: Looker Studio link below is your real dashboard -->
+    <a href="https://datastudio.google.com/reporting/27a8e1d7-a1d7-4bb6-ad47-cc1b8a234719/page/VwhuF" target="_blank"><button class="btn btn-p btn-sm" style="background:linear-gradient(135deg,var(--green),var(--teal))">View Live Dashboard ↗</button></a>
+  </div>
+</article>
+
+<!-- ═══════════════════════════════════════════════════
+     CASE STUDY 4 — SLACK ALERTING AUTOMATION
+     ═══════════════════════════════════════════════════ -->
+<article class="cs-article">
+  <div class="cs-banner" style="background:linear-gradient(135deg,rgba(129,140,248,.13),rgba(167,139,250,.07))">
+    <div class="cs-num" style="color:var(--purple)">Case Study 04 · Automation Engineering</div>
+    <h2 class="cs-atitle">Real-Time Slack Alerting for E-commerce Performance Monitoring — Catching Revenue Drops Before They Compound</h2>
+    <p class="cs-brief">The e-commerce leadership team needed early warning when store performance dropped unexpectedly. A sudden session crash, a revenue freefall mid-campaign, or a conversion rate collapse were typically discovered hours later during manual morning reviews — by which time significant revenue had been lost and paid ad campaigns were still burning budget against a broken funnel.</p>
+    <div class="cs-kpis">
+      <div class="cs-kpi" style="border-color:rgba(129,140,248,.2)"><div class="cs-kv" style="color:var(--purple)">&lt;1hr</div><div class="cs-kl">Issue Detection</div></div>
+      <div class="cs-kpi" style="border-color:rgba(129,140,248,.2)"><div class="cs-kv" style="color:var(--purple)">24/7</div><div class="cs-kl">Monitoring Coverage</div></div>
+      <div class="cs-kpi" style="border-color:rgba(129,140,248,.2)"><div class="cs-kv" style="color:var(--purple)">Hourly</div><div class="cs-kl">Check Cadence</div></div>
+      <div class="cs-kpi" style="border-color:rgba(129,140,248,.2)"><div class="cs-kv" style="color:var(--purple)">0</div><div class="cs-kl">Manual Monitoring</div></div>
+    </div>
+  </div>
+  <div class="cs-body">
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--purple)"><span class="cs-sn">01</span>The Business Problem</h3>
+      <p class="cs-p">During high-traffic campaign periods — flash sales, promotional events, or peak season — small issues could compound into large revenue losses if not caught quickly. A broken checkout flow, a payment gateway timeout, or a campaign link sending traffic to a 404 page would cost thousands in wasted ad spend before anyone noticed in the morning stand-up.</p>
+      <p class="cs-p">The team needed a system that monitored hourly performance automatically, compared it against expected baselines, and pushed actionable alerts to the relevant Slack channel the moment an anomaly crossed a defined threshold — without anyone having to pull a report.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--purple)"><span class="cs-sn">02</span>System Architecture</h3>
+      <div class="cs-arch" style="grid-template-columns:repeat(auto-fill,minmax(160px,1fr))">
+        <div class="cs-arch-step" style="background:rgba(129,140,248,.07);border-color:rgba(129,140,248,.2)"><div class="cs-arch-ico">📡</div><div class="cs-arch-n">GA4 + Shopify</div><div class="cs-arch-d">Session & order data ingested hourly</div></div>
+        <div class="cs-arch-step" style="background:rgba(129,140,248,.07);border-color:rgba(129,140,248,.2)"><div class="cs-arch-ico">🏗️</div><div class="cs-arch-n">BigQuery View</div><div class="cs-arch-d">Hourly monitoring materialized view</div></div>
+        <div class="cs-arch-step" style="background:rgba(129,140,248,.07);border-color:rgba(129,140,248,.2)"><div class="cs-arch-ico">⏰</div><div class="cs-arch-n">AppsScript Trigger</div><div class="cs-arch-d">Scheduled hourly · queries BQ</div></div>
+        <div class="cs-arch-step" style="background:rgba(129,140,248,.07);border-color:rgba(129,140,248,.2)"><div class="cs-arch-ico">⚡</div><div class="cs-arch-n">Threshold Engine</div><div class="cs-arch-d">Compares current vs prior-day baseline</div></div>
+        <div class="cs-arch-step" style="background:rgba(129,140,248,.07);border-color:rgba(129,140,248,.2)"><div class="cs-arch-ico">🔔</div><div class="cs-arch-n">Slack Webhook</div><div class="cs-arch-d">Fires alert with metric + deep link</div></div>
+      </div>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--purple)"><span class="cs-sn">03</span>AppsScript Alert Logic</h3>
+<pre class="cs-code">// Hourly e-commerce anomaly detection — Google AppsScript
+// Queries BigQuery monitoring view and fires Slack alerts
+
+function checkHourlyPerformance() {
+  const WEBHOOK = PropertiesService
+    .getScriptProperties().getProperty('SLACK_WEBHOOK_URL');
+
+  // Thresholds: alert when current metric falls below X% of prior-day baseline
+  const THRESHOLDS = {
+    sessions:         0.70,   // alert if &lt; 70% of same hour yesterday
+    revenue:          0.65,   // alert if &lt; 65% of same hour yesterday
+    conversion_rate:  0.80,   // alert if &lt; 80% of same hour yesterday
+    add_to_cart:      0.75
+  };
+
+  const query = `
+    SELECT
+      metric_name,
+      current_hour_value,
+      prior_day_same_hour_value,
+      ROUND(SAFE_DIVIDE(
+        current_hour_value - prior_day_same_hour_value,
+        prior_day_same_hour_value
+      ) * 100, 1) AS pct_change
+    FROM \`project.analytics.hourly_performance_monitor\`
+    WHERE report_hour = FORMAT_TIMESTAMP('%H', CURRENT_TIMESTAMP(), 'Asia/Manila')
+  `;
+
+  const rows = runBigQueryJob(query);
+
+  const alerts = rows.filter(r => {
+    const threshold = THRESHOLDS[r.metric_name];
+    return threshold && r.current_hour_value &lt; r.prior_day_same_hour_value * threshold;
+  });
+
+  if (alerts.length === 0) return; // No anomalies — silent pass
+
+  const lines = alerts.map(r => (
+    `*${r.metric_name.toUpperCase()}*: ` +
+    `${r.current_hour_value} vs ${r.prior_day_same_hour_value} ` +
+    `(${r.pct_change}% vs same hour yesterday)`
+  )).join('
+');
+
+  UrlFetchApp.fetch(WEBHOOK, {
+    method: 'post',
+    contentType: 'application/json',
+    payload: JSON.stringify({
+      text: `🚨 *Performance Drop Detected*
+${lines}
+` +
+            `<https://datastudio.google.com/your-dashboard|View Dashboard>`
+    })
+  });
+}</pre>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh" style="color:var(--purple)"><span class="cs-sn">04</span>Business Impact</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Reduced average time-to-detection for revenue-impacting incidents from 3–4 hours to under 60 minutes</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Marketing team received real-time alerts during live campaigns — enabling same-hour bid pausing or budget reallocation decisions</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Zero manual monitoring overhead — system ran 24/7 with no human intervention; fully autonomous during weekends and off-hours</div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--green)">✓</span>Alerts included direct Looker Studio deep links — leadership could click straight from Slack into the relevant dashboard view without navigating separately</div>
+      </div>
+    </div>
+    <div class="cs-sect" style="margin-bottom:0">
+      <h3 class="cs-sh" style="color:var(--purple)"><span class="cs-sn">05</span>Technologies Used</h3>
+      <div class="cs-tech">
+        <span class="cs-tbadge" style="color:var(--teal);border-color:rgba(6,182,212,.3);background:rgba(6,182,212,.07)">Google BigQuery</span>
+        <span class="cs-tbadge" style="color:var(--purple);border-color:rgba(167,139,250,.3);background:rgba(167,139,250,.07)">AppsScript</span>
+        <span class="cs-tbadge" style="color:var(--purple);border-color:rgba(167,139,250,.3);background:rgba(167,139,250,.07)">Slack Webhooks</span>
+        <span class="cs-tbadge" style="color:var(--blue);border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.07)">Looker Studio</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">GA4</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Shopify</span>
+        <span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">JavaScript</span>
+      </div>
+    </div>
+  </div>
+  <div class="cs-footer" style="background:rgba(129,140,248,.03)">
+    <span style="color:var(--dim);font-size:13px;font-family:var(--fm)">GTEcom B.V. · 2025</span>
+    <a href="https://datastudio.google.com/reporting/f1eaba62-70a9-406a-8ebe-d3d8475f7ffd/page/CA2oF" target="_blank"><button class="btn btn-s btn-sm">View Related Dashboard ↗</button></a>
+  </div>
+</article>
+
+    </div><!-- end cs-full -->
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- TECH STACK -->
+<section id="techstack" class="section">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="slabel">⬡ Tech Stack</span>
+      <h2 class="stitle">Tools I <span class="gt">Work With</span></h2>
+    </div>
+    <div id="tsGrid"></div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section section-alt">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:48px">
+      <span class="slabel">⬡ Credentials</span>
+      <h2 class="stitle">Certifications &amp; <span class="gt">Training</span></h2>
+    </div>
+    <div class="ct-grid" id="ctGrid"></div>
+  </div>
+</section>
+<div class="hdiv"></div>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="co-grid">
+      <div>
+        <span class="slabel">⬡ Get In Touch</span>
+        <div class="co-cta">Let's Build<br/><span class="gt">Data Systems</span><br/>That Matter</div>
+        <p style="color:var(--muted);font-size:15px;line-height:1.85">Open to remote analytics engineering roles, BI consulting, and freelance dashboard projects. If data is a problem you're trying to solve — let's talk.</p>
+        <div class="co-links">
+          <a href="mailto:reyalvin.anapen@gmail.com" class="card co-lk">
+            <span class="co-li">✉</span>
+            <div><div class="co-ll">Email</div><div class="co-lv">reyalvin.anapen@gmail.com</div></div>
+          </a>
+          <!-- ✏️ Replace with your actual LinkedIn -->
+          <a href="https://linkedin.com/in/reyalvinanapen" target="_blank" class="card co-lk">
+            <span class="co-li">🔗</span>
+            <div><div class="co-ll">LinkedIn</div><div class="co-lv">linkedin.com/in/reyalvinanapen</div></div>
+          </a>
+          <!-- ✏️ Replace with your actual GitHub -->
+          <a href="https://github.com/reyalvinanapen" target="_blank" class="card co-lk">
+            <span class="co-li">⌨</span>
+            <div><div class="co-ll">GitHub</div><div class="co-lv">github.com/reyalvinanapen</div></div>
+          </a>
+          <!-- ✏️ Replace # with your resume file link -->
+          <a href="#" download class="card co-lk">
+            <span class="co-li">↓</span>
+            <div><div class="co-ll">Resume</div><div class="co-lv">Download PDF / DOCX</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="card co-form" id="cfWrap">
+        <h3 style="font-family:var(--fh);font-size:20px;font-weight:700;margin-bottom:24px">Send a Message</h3>
+        <label class="fl">Your Name</label><input type="text" class="fi" placeholder="Jane Smith" id="cN"/>
+        <label class="fl">Email Address</label><input type="email" class="fi" placeholder="jane@company.com" id="cE"/>
+        <label class="fl">Project Type</label><input type="text" class="fi" placeholder="Analytics Engineering, BI Dashboard, Consulting…" id="cT"/>
+        <label class="fl">Message</label><textarea class="fi" id="cM" placeholder="Tell me about your project or opportunity…"></textarea>
+        <button class="btn btn-p" style="width:100%;justify-content:center;padding:14px;margin-top:4px" onclick="submitForm()">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo"><span class="gt">REY</span> ANAPEN <span style="font-family:var(--fs);font-weight:400;font-size:12px;color:var(--dim)">· Senior Data Analyst & Analytics Engineer</span></div>
+  <div style="font-family:var(--fm);font-size:12px">© 2025 Rey Alvin Emboltorio Anapen · Philippines</div>
+  <div class="flinks">
+    <a href="mailto:reyalvin.anapen@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/reyalvinanapen" target="_blank">LinkedIn</a>
+    <a href="https://github.com/reyalvinanapen" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<script>
+'use strict';
+
+// ── DATA ─────────────────────────────────────────────────────────────────────
+
+const SKILLS=[
+  {n:'Analytics Engineering',ico:'⬡',c:'#06B6D4',tags:['Google BigQuery','Snowflake','AWS Redshift','dbt Cloud','Dimensional Modeling','Fact & Dim Tables','Staging Models','Mart Models','SQL Pipelines','Warehouse-First Architecture']},
+  {n:'BI & Dashboarding',ico:'▣',c:'#818CF8',tags:['Tableau','Power BI','Looker Studio','KPI Dashboards','Executive Reporting','Interactive Visualizations','Automated Reports']},
+  {n:'Marketing Analytics',ico:'◈',c:'#F59E0B',tags:['GA4','Google Ads','Meta Ads','DV360 · CM360','ROAS · CAC · LTV · CPA','Attribution Modeling','Funnel Analysis','Salesforce MC']},
+  {n:'E-commerce Analytics',ico:'◉',c:'#10B981',tags:['Shopify Analytics','Amazon Seller Central','TripleWhale','Polar Analytics','SellerCloud','Product Lifecycle','Sales Velocity']},
+  {n:'Automation & Workflows',ico:'▲',c:'#F472B6',tags:['Python','Pandas · NumPy','Scikit-learn','AppsScript','Slack Alerting','Windsor.ai','Supermetrics','Time Series','Segmentation']},
+  {n:'Operations & Reconciliation',ico:'◫',c:'#60A5FA',tags:['Inventory Variance','Bank Reconciliation','AR/AP Workflows','Cross-System Reconciliation','CMMS Analytics','Maintenance Compliance']},
+];
+
+const JOBS=[
+  {r:'Marketing Analytics Engineer',co:'GTEcom B.V.',p:'Jun 2025 – Present',l:'Remote',c:'#06B6D4',
+   a:['Architected analytics-ready BigQuery datasets — staging, transformation, and mart layers serving as the single source of truth for all reporting','Built multi-channel attribution models connecting Shopify, Google Ads, Meta Ads, and GA4 into a unified performance layer','Monitored and analyzed ROAS, CPA, CPC, AOV, LTV, and CAC daily — enabling fast marketing budget decisions','Automated reporting pipelines with Python and AppsScript, reducing manual effort by ~80%','Built Looker Studio executive dashboards refreshed daily for leadership campaign monitoring'],
+   t:['BigQuery','dbt Cloud','Looker Studio','GA4','Python','Windsor.ai','Shopify','AppsScript']},
+  {r:'E-commerce & Marketing Analytics Lead',co:'Ascendis',p:'Aug 2024 – Jun 2025',l:'Remote · Montreal HQ',c:'#818CF8',
+   a:['Led analytics strategy across e-commerce and digital marketing channels for a global brand','Delivered weekly executive performance narratives covering Sales, ROI, CPA, ROAS, AOV, UPT, and LTV','Optimized paid media campaigns across Google Ads and Meta Ads using data-driven attribution insights','Implemented GA4, TripleWhale, and Polar Analytics stack for real-time multi-channel visibility','Governed analytics tool stack accuracy across Tableau, SFMC, and Looker Studio'],
+   t:['Tableau','Looker Studio','GA4','Meta Ads','Google Ads','GTM','Semrush','TripleWhale','Polar Analytics']},
+  {r:'Senior Data Analyst',co:'Topdrill',p:'Jun 2024 – Jul 2024',l:'Remote · Kalgoorlie, WA',c:'#F59E0B',
+   a:['Built complex Snowflake SQL queries for large-scale drilling operations datasets','Designed dimensional data models for efficient operational data storage and retrieval','Developed ML-based anomaly detection and equipment failure prediction models using Scikit-learn','Created Tableau dashboards delivering operational insights to engineers and management'],
+   t:['Snowflake','Tableau','Python','Scikit-learn','SQL']},
+  {r:'Performance Marketing Analyst',co:'Pepperstone Group',p:'Nov 2022 – Apr 2024',l:'Remote · Melbourne, AU',c:'#10B981',
+   a:['Optimized global paid media campaigns across Google Ads, DV360, CM360, Facebook, and Twitter Ads','Built and maintained marketing data models in AWS Redshift using DBeaver and Azure Data Studio','Utilized dbt Cloud for transformation workflows — improving pipeline reliability and documentation standards','Tracked Qualified Leads, CPC, CTR, First Trades, and ROI for board-level marketing reporting','Built Tableau, Power BI, and Looker Studio dashboards serving marketing and executive teams globally'],
+   t:['Tableau','Power BI','dbt Cloud','AWS Redshift','GA4','SFMC','DV360','CM360','Python','DBeaver']},
+  {r:'Senior Data Specialist',co:'Hobbyco',p:'Aug 2022 – Oct 2022',l:'Remote · NSW, AU',c:'#F472B6',
+   a:['Managed Shopify and Amazon Seller Central product listings — maintaining catalog accuracy and performance metrics','Performed cross-system data reconciliation between Shopify, CIN7, and warehouse management systems','Developed Power BI and Tableau reports supporting inventory variance analysis and stock tracking'],
+   t:['Shopify','Amazon Seller Central','CIN7','Power BI','Tableau','SQL']},
+  {r:'Data Analyst (8+ Years)',co:'Philex Mining Corporation',p:'Mar 2014 – Oct 2022',l:'Padcal, Benguet, Philippines',c:'#60A5FA',
+   a:['Built predictive maintenance models using Moving Averages, Exponential Smoothing, and Regression Analysis on 8+ years of CMMS data','Developed MTBF, downtime frequency, and maintenance compliance dashboards in Power BI and Tableau for weekly executive meetings','Extracted and transformed data from CMMS, Inventory, and Procurement systems — building ETL pipelines for real-time operational analytics','Prepared and presented weekly data-visualized reports for Managers and Supervisors meetings'],
+   t:['MS SQL','Power BI','Tableau','Python','Azure Data Studio','MEX-CMMS','MS Access']},
+];
+
+const PROJECTS=[
+  {cat:'Marketing Analytics',cc:'#06B6D4',cb:'rgba(6,182,212,.1)',
+   title:'Marketing Attribution Dashboard',
+   prob:'Fragmented ROAS across Shopify, Google Ads, Meta, and GA4 made consistent budget decisions impossible — every platform claimed different conversion credit.',
+   built:'Warehouse-first attribution system in BigQuery with dbt staging → mart architecture. Unified daily ROAS, CAC, CPA, and LTV reporting in Looker Studio with shared attribution logic across all channels.',
+   impact:'Eliminated 4+ hrs of weekly reporting consolidation · Enabled daily budget reallocation decisions · Unified 5+ data sources into 1 source of truth',
+   tools:['BigQuery','dbt Cloud','Looker Studio','Windsor.ai','Shopify','Google Ads','Meta Ads','GA4'],
+   dashUrl:'https://datastudio.google.com/reporting/54c81c99-d197-4f10-8052-7403a047e3ed/page/xKTtF',caseUrl:'#casestudies'},
+  {cat:'E-commerce Analytics',cc:'#10B981',cb:'rgba(16,185,129,.1)',
+   title:'Shopify Product Lifecycle & Sales Velocity',
+   prob:"Buying team had zero visibility into SKU performance post-import — slow-moving inventory was only discovered during quarterly stocktakes, months after products had been aging.",
+   built:'BigQuery + dbt product lifecycle model with date-scaffolded SQL classifying every SKU by seller tier (Zero / One-Time / Multi Seller) and velocity flag (Fast Mover / Slow Starter / Never Sold) with days-to-first-sale tracking.',
+   impact:'Daily SKU-level visibility for buying team · Proactive dead stock flagging · Supplier performance scoring by avg days-to-first-sale',
+   tools:['BigQuery','dbt Cloud','Looker Studio','Shopify','Python','AppsScript'],
+   dashUrl:'https://datastudio.google.com/reporting/27a8e1d7-a1d7-4bb6-ad47-cc1b8a234719/page/VwhuF',caseUrl:'#casestudies'},
+  {cat:'Automation Engineering',cc:'#818CF8',cb:'rgba(129,140,248,.1)',
+   title:'Real-Time Slack Performance Alerting',
+   prob:'Revenue drops, session crashes, and conversion collapses during live campaigns were discovered hours later in morning stand-ups — costing wasted ad spend and delayed response.',
+   built:'Hourly BigQuery monitoring view + AppsScript trigger comparing current vs prior-day-same-hour metrics. Fires Slack webhooks with metric name, % deviation, and Looker Studio deep link when anomaly thresholds are crossed.',
+   impact:'Issue detection reduced from 3–4 hrs to <60 min · Zero manual monitoring overhead · 24/7 autonomous coverage',
+   tools:['BigQuery','AppsScript','Slack API','GA4','Shopify','Looker Studio'],
+   dashUrl:'https://datastudio.google.com/reporting/f1eaba62-70a9-406a-8ebe-d3d8475f7ffd/page/CA2oF',caseUrl:'#casestudies'},
+  {cat:'Operational Analytics',cc:'#F59E0B',cb:'rgba(245,158,11,.1)',
+   title:'Predictive Maintenance Analytics — Mining',
+   prob:'Recurring unplanned equipment downtime at a mining operation caused production losses with no data-driven way to predict failures or schedule proactive maintenance windows.',
+   built:'Predictive maintenance system using 8+ years of MEX-CMMS data. Applied Exponential Smoothing and Regression Analysis to forecast failure intervals per equipment type. Built MTBF, availability, and compliance dashboards in Tableau and Power BI.',
+   impact:'Enabled proactive maintenance scheduling 3–4 weeks ahead · Reduced emergency parts procurement · Weekly MTBF reporting became standard executive deliverable',
+   tools:['Python','Scikit-learn','Tableau','Power BI','MS SQL','MEX-CMMS','Azure Data Studio'],
+   dashUrl:'#',caseUrl:'#casestudies'},
+  {cat:'E-commerce Analytics',cc:'#F472B6',cb:'rgba(244,114,182,.1)',
+   title:'Amazon ASIN Performance Scorecard',
+   prob:'Weekly Amazon performance reviews were compiled manually from Seller Central exports — time-consuming, error-prone, and missing the ASIN-level comparisons leadership needed.',
+   built:'Automated Amazon performance pipeline pulling Units Sold, Revenue, BSR rank, ACoS, Return Rate, and Inventory Health across all active ASINs into a structured weekly scorecard dashboard with trend lines and anomaly flags.',
+   impact:'Eliminated manual weekly export compilation · Enabled ASIN-level performance comparisons · Faster advertising optimization decisions',
+   tools:['Amazon Seller Central','SellerCloud','Python','Looker Studio','AppsScript','BigQuery'],
+   dashUrl:'#',caseUrl:'#'},
+  {cat:'BI Dashboard',cc:'#60A5FA',cb:'rgba(96,165,250,.1)',
+   title:'E-commerce Blended Sales & Profit Tracker',
+   prob:'Leadership lacked a unified P&L view — Shopify, Amazon, and offline channel revenue lived in separate spreadsheets with no consistent COGS or margin modeling.',
+   built:'Unified sales and profit tracker in Looker Studio pulling from a BigQuery mart model joining Shopify revenue, Amazon settlements, COGS tables, and ad spend into a single blended margin view by channel, category, and SKU.',
+   impact:'Unified multi-channel revenue in one view · Enabled margin-aware campaign decisions · Replaced 6 separate spreadsheet reports',
+   tools:['BigQuery','dbt Cloud','Looker Studio','Shopify','Amazon','Python'],
+   dashUrl:'https://datastudio.google.com/reporting/f1eaba62-70a9-406a-8ebe-d3d8475f7ffd/page/CA2oF',caseUrl:'#'},
+];
+
+const TECH=[
+  {cat:'Data Warehousing & Engineering',items:['Google BigQuery','Snowflake','AWS Redshift','MS SQL Server','MS Access','dbt Cloud','Dimensional Modeling','Fact & Dim Tables','SQL Pipelines']},
+  {cat:'BI & Visualization',items:['Tableau','Power BI','Looker Studio','KPI Dashboards','Executive Reporting']},
+  {cat:'Marketing & E-commerce',items:['GA4','Google Ads','Meta Ads','DV360','CM360','Shopify Analytics','Amazon Seller Central','TripleWhale','Polar Analytics','SellerCloud','Windsor.ai','Supermetrics','SFMC','Google Tag Manager','Semrush']},
+  {cat:'Programming & Automation',items:['Python','Pandas','NumPy','Scikit-learn','Statsmodels','AppsScript','Slack API','Time Series Forecasting','Customer Segmentation']},
+  {cat:'Dev & Data Tools',items:['DBeaver','Azure Data Studio','Jira','GitHub','MEX-CMMS','SAP','Google Workspace']},
+];
+
+const CERTS=[
+  {ico:'🏆',bg:'rgba(6,182,212,.1)',n:'Google Business Intelligence Professional Certificate',iss:'Google',yr:'Apr 2024'},
+  {ico:'📊',bg:'rgba(245,158,11,.1)',n:'Google Analytics Individual Qualification (GAIQ)',iss:'Google Analytics Academy',yr:'Aug 2021'},
+  {ico:'📣',bg:'rgba(16,185,129,.1)',n:'Fundamentals of Digital Marketing',iss:'Google Digital Garage',yr:'Aug 2021'},
+  {ico:'🗄️',bg:'rgba(129,140,248,.1)',n:'Advanced Databases and SQL Querying',iss:'Udemy',yr:'Oct 2018'},
+  {ico:'⚙️',bg:'rgba(244,63,94,.1)',n:'Data Structures and Algorithms',iss:'Udemy',yr:'Apr 2018'},
+  {ico:'🌐',bg:'rgba(96,165,250,.1)',n:'CCNA — LAN Switching & Wireless',iss:'Cisco Networking Academy',yr:'Mar 2011'},
+];
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function rgb(h){return[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)].join(',')}
+
+// ── RENDERS ──────────────────────────────────────────────────────────────────
+function rSkills(){
+  document.getElementById('skGrid').innerHTML=SKILLS.map(s=>`
+    <div class="card sk-card">
+      <div class="sk-ico" style="background:rgba(${rgb(s.c)},.12);color:${s.c};border:1px solid rgba(${rgb(s.c)},.25)">${s.ico}</div>
+      <div class="sk-name" style="color:${s.c}">${s.n}</div>
+      <div class="sk-tags">${s.tags.map(t=>`<span class="sk-tag">${t}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+let aJob=0;
+function rExpSide(){
+  document.getElementById('exSide').innerHTML=JOBS.map((j,i)=>`
+    <button class="ex-tab${i===0?' on':''}" onclick="swJob(${i})" id="jt${i}" style="${i===0?`background:rgba(${rgb(j.c)},.06)`:''}">
+      <div class="ex-co">${j.co}</div>
+      <div class="ex-pd">${j.p}</div>
+    </button>`).join('');
+  rExpDet(0);
+}
+function swJob(i){
+  aJob=i;
+  document.querySelectorAll('.ex-tab').forEach((t,idx)=>{
+    t.classList.toggle('on',idx===i);
+    t.style.background=idx===i?`rgba(${rgb(JOBS[idx].c)},.06)`:'';
+  });
+  rExpDet(i);
+}
+function rExpDet(i){
+  const j=JOBS[i],d=document.getElementById('exDet');
+  d.style.borderLeft=`2px solid rgba(${rgb(j.c)},.3)`;
+  d.style.paddingLeft='36px';
+  d.innerHTML=`
+    <div class="ex-hdr">
+      <div>
+        <div class="ex-role" style="color:${j.c}">${j.r}</div>
+        <div class="ex-company">${j.co}</div>
+        <div class="ex-loc">${j.l}</div>
+      </div>
+      <span class="ex-pbadge" style="color:${j.c};background:rgba(${rgb(j.c)},.08);border-color:rgba(${rgb(j.c)},.25)">${j.p}</span>
+    </div>
+    <div class="ex-albl">Key Achievements</div>
+    ${j.a.map(a=>`<div class="ex-ai"><span class="ex-arr" style="color:${j.c}">▸</span><span class="ex-at">${a}</span></div>`).join('')}
+    <div class="ex-albl" style="margin-top:20px">Stack Used</div>
+    <div class="ex-tools">${j.t.map(t=>`<span class="ex-tool">${t}</span>`).join('')}</div>`;
+}
+
+function rProjects(){
+  document.getElementById('pjGrid').innerHTML=PROJECTS.map(p=>`
+    <div class="card pj-card" style="border-top:2px solid rgba(${rgb(p.cc)},.3)">
+      <span class="pj-cat" style="color:${p.cc};background:${p.cb}">${p.cat}</span>
+      <h3 class="pj-title">${p.title}</h3>
+      <p class="pj-prob">${p.prob}</p>
+      <div class="pj-impact"><strong>What I built:</strong> ${p.built}<br/><br/><strong style="color:var(--green)">Impact:</strong> ${p.impact}</div>
+      <div class="pj-tools">${p.tools.map(t=>`<span class="pj-tool">${t}</span>`).join('')}</div>
+      <div class="pj-btns">
+        ${p.dashUrl&&p.dashUrl!=='#'?`<a href="${p.dashUrl}" target="_blank"><button class="btn btn-p btn-sm">View Dashboard ↗</button></a>`:`<button class="btn btn-s btn-sm" style="opacity:.4;cursor:default" disabled>Dashboard Soon</button>`}
+        ${p.caseUrl&&p.caseUrl!=='#'?`<a href="${p.caseUrl}"><button class="btn btn-s btn-sm">Case Study →</button></a>`:''}
+      </div>
+    </div>`).join('');
+}
+
+function rTech(){
+  document.getElementById('tsGrid').innerHTML=TECH.map(c=>`
+    <div class="ts-cat">
+      <div class="ts-cl">${c.cat}</div>
+      <div class="ts-row">${c.items.map(i=>`<span class="ts-b">${i}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+function rCerts(){
+  document.getElementById('ctGrid').innerHTML=CERTS.map(c=>`
+    <div class="card ct-card">
+      <div class="ct-ico" style="background:${c.bg}">${c.ico}</div>
+      <div>
+        <div class="ct-name">${c.n}</div>
+        <div class="ct-iss">${c.iss}</div>
+        <div class="ct-yr">${c.yr}</div>
+      </div>
+    </div>`).join('');
+}
+
+// ── TITLE ROTATION ────────────────────────────────────────────────────────────
+const roles=['Analytics Engineer','Senior Data Analyst','Marketing Intelligence Lead','BI Architecture Expert','E-commerce Data Strategist'];
+let ri=0;
+setInterval(()=>{
+  const el=document.getElementById('hRole');
+  el.style.opacity='0'; el.style.transform='translateY(-10px)';
+  setTimeout(()=>{ri=(ri+1)%roles.length; document.getElementById('rTxt').textContent=roles[ri]; el.style.transition='all .35s ease'; el.style.opacity='1'; el.style.transform='translateY(0)';},350);
+},3000);
+
+// ── NAV SCROLL ────────────────────────────────────────────────────────────────
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',window.scrollY>40));
+
+// ── CONTACT FORM ──────────────────────────────────────────────────────────────
+function submitForm(){
+  const n=document.getElementById('cN').value.trim();
+  const e=document.getElementById('cE').value.trim();
+  const m=document.getElementById('cM').value.trim();
+  if(!n||!e||!m){alert('Please fill in name, email, and message.'); return;}
+  document.getElementById('cfWrap').innerHTML=`
+    <div style="text-align:center;padding:60px 20px">
+      <div style="font-size:52px;margin-bottom:16px">✓</div>
+      <h3 style="font-family:var(--fh);font-size:24px;color:var(--teal);margin-bottom:10px">Message Sent!</h3>
+      <p style="color:var(--muted);font-size:15px">Thanks ${n}! I'll get back to you within 24 hours.</p>
+    </div>`;
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+rSkills(); rExpSide(); rProjects(); rTech(); rCerts();
+</script>
+</body>
+</html>

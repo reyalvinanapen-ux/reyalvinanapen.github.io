@@ -238,6 +238,7 @@ footer{padding:32px var(--pad);border-top:1px solid var(--border);display:flex;j
 
 #personal .card img:hover { transform: scale(1.04); }
 @media(max-width:600px){ #personal .wrap > div:first-of-type + div { grid-template-columns:1fr !important; } }
+article[id]{scroll-margin-top:88px}
 </style>
 </head>
 <body>
@@ -895,6 +896,49 @@ ${lines}
   </div>
 </article>
 
+
+<article class="cs-article" id="case-mill-plant" style="scroll-margin-top:88px">
+  <div class="cs-banner" style="background:linear-gradient(135deg,rgba(245,158,11,.14),rgba(6,182,212,.08))">
+    <div class="cs-num" style="color:var(--amber)">Case Study 05 · Mill Plant Maintenance &amp; Reliability</div>
+    <h2 class="cs-atitle">Turning Mill Plant Maintenance Data into Actionable Operational Reporting</h2>
+    <p class="cs-brief">A Looker Studio dashboard for mill plant reporting, designed to connect maintenance information with practical planning discussions.</p>
+    <p class="cs-p" style="margin-top:16px;font-size:13px;color:var(--amber)">Sample case study · The scenario, analytical workflow and decision examples below are illustrative. They do not represent verified dashboard features or measured operational results.</p>
+  </div>
+  <div class="cs-body">
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">01</span>The Business Problem</h3>
+      <p class="cs-p">In a typical mill plant, work orders and equipment history can show what happened without clearly showing what needs attention next. Planners need to distinguish recurring equipment issues from isolated incidents, while supervisors need a concise view of the maintenance priorities that could affect production.</p>
+      <p class="cs-p">The reporting objective is to bring those questions into one review: where is downtime concentrated, which assets need investigation, and what work should be prioritised?</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">02</span>Sample Analytical Approach</h3>
+      <p class="cs-p">A suitable workflow starts by standardising equipment IDs, dates, work order status and failure categories. Duplicate work orders, missing repair times and overlapping downtime events should be checked before calculating reliability indicators. Planned maintenance must be separated from breakdowns so the measures support fair comparisons.</p>
+      <p class="cs-p">The proposed reporting structure moves from an overview to equipment-level investigation, using date, plant area, asset and work order filters where those fields are available. Each KPI should have a documented definition and a consistent reporting period.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">03</span>Suggested Measures &amp; Interpretation</h3>
+      <div class="cs-blist">
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><span><strong>Downtime hours:</strong> rank assets by lost operating time, then investigate recurring causes on the largest contributors.</span></div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><span><strong>MTBF:</strong> operating hours divided by recorded failures. A decline can prompt a review of operating conditions and preventive maintenance tasks.</span></div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><span><strong>MTTR:</strong> corrective repair hours divided by completed repairs. Longer repair times can indicate parts, access, skills or diagnostic constraints.</span></div>
+        <div class="cs-bi"><span class="cs-bd" style="color:var(--amber)">▸</span><span><strong>Maintenance compliance &amp; overdue work:</strong> assess work completed by its due date, then prioritise overdue tasks by asset criticality and operational risk.</span></div>
+      </div>
+      <p class="cs-p">These are suggested measures for the sample scenario. Calculation requires complete source records and agreed definitions; missing values should remain visible rather than being treated as zero.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">04</span>Example Decision in Practice</h3>
+      <p class="cs-p"><strong>Illustrative scenario:</strong> if one mill pump repeatedly appears among the highest downtime contributors, filter to its maintenance history and compare failure frequency with repair duration. Frequent short repairs may warrant a recurring-failure investigation; infrequent long repairs may point to spare parts or repair-readiness issues. The planner can assign an investigation owner and review the asset again in the next reporting cycle.</p>
+    </div>
+    <div class="cs-sect">
+      <h3 class="cs-sh"><span class="cs-sn">05</span>Business Value &amp; Validation</h3>
+      <p class="cs-p">The intended value is a more focused maintenance review: clearer priorities, traceable equipment issues and a shared basis for discussing reliability. To measure impact, establish a baseline and compare downtime, emergency work and overdue critical tasks over equivalent operating periods, accounting for production load and shutdown schedules.</p>
+      <p class="cs-p">This portfolio example demonstrates an approach to maintenance BI. Downtime reduction, cost savings, predictive modelling and live CMMS integration are not claimed for this dashboard.</p>
+      <div class="cs-tech"><span class="cs-tbadge" style="color:var(--amber);border-color:rgba(245,158,11,.3)">Looker Studio</span><span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Mill Plant Reporting</span><span class="cs-tbadge" style="color:var(--muted);border-color:var(--border)">Maintenance Decision Support</span></div>
+    </div>
+  </div>
+  <div class="cs-footer"><span style="color:var(--muted);font-size:13px">Explore the mill plant report</span><a class="btn btn-p btn-sm" href="https://datastudio.google.com/reporting/8437894f-4e6d-4b74-a5f4-54b931bb5217/page/EM9CG" target="_blank" rel="noopener noreferrer">View Live Dashboard ↗</a></div>
+</article>
+
     </div><!-- end cs-full -->
   </div>
 </section>
@@ -1066,6 +1110,14 @@ const JOBS=[
 ];
 
 const PROJECTS=[
+  {cat:'Mill Plant · Operational BI',cc:'#F59E0B',cb:'rgba(245,158,11,.1)',
+   title:'Mill Plant Maintenance & Reliability Dashboard',
+   prob:'Maintenance teams need a clear view of equipment reliability and maintenance priorities to support mill plant planning.',
+   built:'An interactive Looker Studio dashboard for mill plant reporting, paired with a sample case study explaining how maintenance data can support operational decisions.',
+   impact:'Decision focus: identify downtime drivers, review maintenance priorities, and support focused planning discussions. Benefits are illustrative; no measured savings are claimed.',
+   tools:['Looker Studio','Operational Reporting','Maintenance Analytics'],
+   dashUrl:'https://datastudio.google.com/reporting/8437894f-4e6d-4b74-a5f4-54b931bb5217/page/EM9CG',caseUrl:'#case-mill-plant'},
+
   {cat:'Marketing Analytics',cc:'#06B6D4',cb:'rgba(6,182,212,.1)',
    title:'Marketing Attribution Dashboard',
    prob:'Fragmented ROAS across Shopify, Google Ads, Meta, and GA4 made consistent budget decisions impossible — every platform claimed different conversion credit.',
